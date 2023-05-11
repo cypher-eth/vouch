@@ -52,15 +52,20 @@ def cli(cli_ctx, network):
 
     bolivares_nft = deploy_bolivares_nft(owner)
     # bolivares_nft.init(vouch, sender=owner, max_fee=max_fee_calc())
-    bolivares_nft.register(recipient, barcode_5, sender=owner, max_fee=max_fee_calc())
-    bolivares_nft.vouch(recipient, sender=owner, max_fee=max_fee_calc())
+    bolivares_nft.vouch(barcode_5, "test", sender=owner, max_fee=max_fee_calc())
+    bolivares_nft.register(barcode_5, sender=recipient, max_fee=max_fee_calc())
+    bolivares_nft.vouch(barcode_50, "test", sender=recipient, max_fee=max_fee_calc())
 
     # bolivares_nft.register(recipient2, barcode_50, sender=recipient, max_fee=max_fee_calc())
     # bolivares_nft.confirm(recipient2, barcode_50, 1, sender=owner, max_fee=max_fee_calc())
     # bolivares_nft.vouch(recipient2, sender=owner)
 
-    print(bolivares_nft.verify(barcode_5));
-    print(bolivares_nft.verify(barcode_50));
+    print(bolivares_nft.doesVouch(owner,recipient))
+    bolivares_nft.processUnvouched(barcode_5, sender=recipient, max_fee=max_fee_calc())
+    print(bolivares_nft.doesVouch(owner,recipient))
+    print(bolivares_nft.getUserFromVouch(barcode_5))
+    print(bolivares_nft.verify(barcode_5))
+    print(bolivares_nft.verify(barcode_50))
 
     print(owner)
 
