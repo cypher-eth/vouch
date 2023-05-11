@@ -8,7 +8,7 @@ import "./Utils/BokkyPooBahsDateTimeLibrary.sol";
 import "./Vouch.sol";
 
 
-contract Bolivares is Vouch, 
+contract Bolivares is Vouch,
     ERC721S("Test Bolivares", "VIBES"), BolivaresDescriptor
 
  {
@@ -38,19 +38,7 @@ contract Bolivares is Vouch,
     // // Register
     // // ------------------------------------------------------------------------
 
-
-    // function register () external {
-    //     vouch.vouch(msg.sender, REGISTER_VOUCH);
-    // }
-
-    // function commit (address user, string memory barcode) external {
-    //     // only bouncer
-    //     // Adds person to the allowlist
-    //     commit = keccak256(abi.encode(address(this), VOUCH_ID, barcode));
-    //     userCommit[commit] = user;
-    // }
-
-    // User register another user
+    // User register themselves
     function register (address user, string memory barcode) external {
         barcodes[barcode] = true;
         userBarcode[user] = barcode;
@@ -59,15 +47,6 @@ contract Bolivares is Vouch,
         userCommit[commit] = user;
     }
 
-    // Bouncer confirm
-    function confirm (address user, string memory barcode, uint256 invites) external {
-        // only bouncer
-        require(keccak256(abi.encode(barcode)) == keccak256(abi.encode(userBarcode[user])));
-        // Adds person to the allowlist
-        bytes32 commit = keccak256(abi.encode(address(this), VOUCH_ID, barcode));
-        userInvites[user] = invites;
-
-    }
 
     // //  ------------------------------------------------------------------------
     // // Vouch

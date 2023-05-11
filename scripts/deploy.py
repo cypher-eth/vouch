@@ -47,11 +47,11 @@ def cli(cli_ctx, network):
         recipient = "0x0C30403Bc4d0BdD6cbaC15E4499125AE6599aa23"
         recipient2 = "0x0C30403Bc4d0BdD6cbaC15E4499125AE6599aa23"
 
-    vouch = deploy_vouch(owner)
-    vouch.vouch(recipient,"Test", max_fee=max_fee_calc(), sender=owner)
+    # vouch = deploy_vouch(owner)
+    # vouch.vouch(recipient,"Test", max_fee=max_fee_calc(), sender=owner)
 
     bolivares_nft = deploy_bolivares_nft(owner)
-    bolivares_nft.init(vouch, sender=owner, max_fee=max_fee_calc())
+    # bolivares_nft.init(vouch, sender=owner, max_fee=max_fee_calc())
     bolivares_nft.register(recipient, barcode_5, sender=owner, max_fee=max_fee_calc())
     bolivares_nft.vouch(recipient, sender=owner, max_fee=max_fee_calc())
 
