@@ -1,0 +1,23 @@
+name: vouch
+plugins:
+  - name: solidity
+  - name: etherscan
+  - name: polygon
+  - name: hardhat
+  
+default_ecosystem: ethereum
+
+polygon:
+  default_network: mumbai
+
+geth:
+  ethereum:
+    goerli:
+      uri: https://goerli.blockpi.network/v1/rpc/public
+      # uri: https://rpc.goerli.mudit.blog
+  polygon:
+    mainnet:
+      uri: https://rpc-mainnet.maticvigil.com
+    mumbai:
+      uri: https://matic-mumbai.chainstacklabs.com
+  
