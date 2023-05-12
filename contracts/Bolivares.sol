@@ -47,13 +47,13 @@ contract Bolivares is Vouch, Documents,
     // TODO: add barcode count? not sure if useful/scaleable
 
     // User register themselves
-    function register (string memory barcode) external {
+    function register (string calldata barcode) external {
         require(barcodes[barcode] == address(0), "Cannot register same bill twice");
         barcodes[barcode] = msg.sender;
         userBarcode[msg.sender] = barcode;
     }
 
-    function unregister (string memory barcode) external {
+    function unregister (string calldata barcode) external {
         require(barcodes[barcode] == msg.sender);
         // require(userBarcode[msg.sender] == barcode);
         barcodes[barcode] = address(0);
@@ -61,13 +61,18 @@ contract Bolivares is Vouch, Documents,
     }
 
     // if there is an array of unvouched, process the array in chunks
-    function processUnvouched(string memory barcode) external {
+    function processUnvouched(string calldata barcode) external {
         VouchData[] memory vouches = unvouched[barcode];
+        require(vouches.length > 0);
         VouchData memory vouchData = unvouched[barcode][vouches.length-1];
         unvouched[barcode].pop();
         _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
     }
 
+    function unvouchedCount(string calldata barcode) external view returns (uint) {
+        VouchData[] memory vouches = unvouched[barcode];
+        return vouches.length;
+    }
 
     // //  ------------------------------------------------------------------------
     // // Vouch

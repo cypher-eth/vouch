@@ -61,6 +61,8 @@ def cli(cli_ctx, network):
     # bolivares_nft.vouch(recipient2, sender=owner)
 
     print(bolivares_nft.doesVouch(owner,recipient))
+    print(bolivares_nft.verify(barcode_5))
+    print(bolivares_nft.unvouchedCount(barcode_5))
     bolivares_nft.processUnvouched(barcode_5, sender=recipient, max_fee=max_fee_calc())
     print(bolivares_nft.doesVouch(owner,recipient))
     print(bolivares_nft.getUserFromVouch(barcode_5))
