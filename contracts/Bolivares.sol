@@ -85,10 +85,19 @@ contract Bolivares is
      */
     function processUnvouched(string calldata barcode) external {
         VouchData[] memory vouches = unvouched[barcode];
-        require(vouches.length > 0);
-        VouchData memory vouchData = vouches[vouches.length-1];
-        unvouched[barcode].pop();
-        _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
+        uint256 i;
+        for(; i < vouches.length;) {
+            VouchData memory vouchData = vouches[i];
+            _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
+            unchecked {
+                i++;
+            }
+        }
+        
+        delete unvouched[barcode];
+        // VouchData memory vouchData = vouches[vouches.length-1];
+        // unvouched[barcode].pop();
+        // _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
     }
 
     /**
