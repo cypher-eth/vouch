@@ -82,7 +82,7 @@ contract Bolivares is Documents,
         require(barcodes[barcode] == msg.sender);
         // require(userBarcode[msg.sender] == barcode);
         barcodes[barcode] = address(0);
-        userBarcode[address(0)] = barcode;
+        userBarcode[msg.sender] = "";
     }
 
     // if there is an array of unvouched, process the array in chunks
