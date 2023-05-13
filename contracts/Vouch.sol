@@ -13,25 +13,12 @@ contract Vouch {
     }
 
     /// @notice Mapping from vouchId => vouch info.
-    mapping (bytes32 => VouchInfo) public vouchInfo;
-    mapping (bytes32 => string) public vouchMsg;
+    mapping(bytes32 => VouchInfo) public vouchInfo;
+    mapping(bytes32 => string) public vouchMsg;
 
     /// @notice Mapping from user => user info.
-    mapping (address => bytes32[]) public userInfo;
-
-    /// @dev reentrancy guard
-    uint8 internal constant _not_entered = 1;
-    uint8 internal constant _entered = 2;
-    uint8 internal _entered_state;
-
-    modifier nonreentrant() {
-        require(_entered_state == _not_entered);
-        _entered_state = _entered;
-        _;
-        _entered_state = _not_entered;
-    }
-
-
+    mapping(address => bytes32[]) public userInfo;
+    
     // ------------------------------------------------------------------------
     // Vouching
     // ------------------------------------------------------------------------
@@ -62,34 +49,44 @@ contract Vouch {
     //     return _updateVouch(vouchId, sender);
     // }
 
-    function _vouch(address recipient, string memory message, address sender) internal returns (bool success) {
-        bytes32 hashed = generateVouchHash(sender,recipient,message);
+    function _vouch(
+        address recipient,
+        string memory message,
+        address sender,
+        bytes32 vouchId,
+    ) internal returns (bool success) {
+        // bytes32 hashed = generateVouchHash(sender, recipient, message);
 
         // Update vouch
-        _updateVouch(hashed, sender); 
-        vouchMsg[hashed] = message;
+        _updateVouch(vouchId, sender);
+        vouchMsg[vouchId] = message;
 
         return true;
     }
 
-    function _updateVouch(bytes32 vouchId, address sender) private returns (bool success) {
-        if ( vouchInfo[vouchId].lastUpdateTime == 0 ) { 
+    function _updateVouch(
+        bytes32 vouchId,
+        address sender
+    ) private returns (bool success) {
+        if (vouchInfo[vouchId].lastUpdateTime == 0) {
             userInfo[sender].push(vouchId);
         }
         vouchInfo[vouchId] = VouchInfo(sender, uint48(block.timestamp), 0);
         return true;
     }
 
-
     // ------------------------------------------------------------------------
     // Revoke
     // ------------------------------------------------------------------------
 
-    function revoke( bytes32 vouchId) external returns (bool success) {
-        return _revoke(vouchId, msg.sender );
+    function revoke(bytes32 vouchId) external returns (bool success) {
+        return _revoke(vouchId, msg.sender);
     }
 
-    function _revoke( bytes32 vouchId, address sender) private returns (bool success) {
+    function _revoke(
+        bytes32 vouchId,
+        address sender
+    ) private returns (bool success) {
         require(vouchInfo[vouchId].sender == sender, "Sender did not vouch");
         vouchInfo[vouchId].revokedTime = uint48(block.timestamp);
         return true;
@@ -117,8 +114,11 @@ contract Vouch {
     //     verifyVouchSig(generateVouchHash(recipient,message),sig);
     // }
 
-    function verifyVouchSig(bytes32 hash, bytes calldata sig) public pure returns (bool success) {
-        if ( address(0) == ecrecoverFromSig(hash, sig)) return false;
+    function verifyVouchSig(
+        bytes32 hash,
+        bytes calldata sig
+    ) public pure returns (bool success) {
+        if (address(0) == ecrecoverFromSig(hash, sig)) return false;
         return true;
     }
 
@@ -149,7 +149,10 @@ contract Vouch {
     // Parts from https://gist.github.com/axic/5b33912c6f61ae6fd96d6c4a47afde6d
     // ------------------------------------------------------------------------
 
-    function ecrecoverFromSig(bytes32 hash, bytes memory sig) public pure returns (address recoveredAddress) {
+    function ecrecoverFromSig(
+        bytes32 hash,
+        bytes memory sig
+    ) public pure returns (address recoveredAddress) {
         if (sig.length == 65) {
             bytes32 r;
             bytes32 s;
@@ -168,14 +171,18 @@ contract Vouch {
         }
     }
 
-
     /**
      * @dev Overload of {ECDSA-tryRecover} that receives the `v`,
      * `r` and `s` signature fields separately.
      *
      * _Available since v4.3._
      */
-    function tryRecover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+    function tryRecover(
+        bytes32 hash,
+        uint8 v,
+        bytes32 r,
+        bytes32 s
+    ) internal pure returns (address) {
         // EIP-2 still allows signature malleability for ecrecover(). Remove this possibility and make the signature
         // unique. Appendix F in the Ethereum Yellow paper (https://ethereum.github.io/yellowpaper/paper.pdf), defines
         // the valid range for s in (301): 0 < s < secp256k1n ÷ 2 + 1, and for v in (302): v ∈ {27, 28}. Most
@@ -185,7 +192,10 @@ contract Vouch {
         // with 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141 - s1 and flip v from 27 to 28 or
         // vice versa. If your library also generates signatures with 0/1 for v instead 27/28, add 27 to v to accept
         // these malleable signatures as well.
-        if (uint256(s) > 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0) {
+        if (
+            uint256(s) >
+            0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0
+        ) {
             return address(0);
         }
 
@@ -197,5 +207,4 @@ contract Vouch {
 
         return signer;
     }
-
 }
