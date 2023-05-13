@@ -78,13 +78,25 @@ contract Bolivares is
         userBarcode[address(0)] = barcode;
     }
 
-    // if there is an array of unvouched, process the array in chunks
     /**
-     * @notice Processes the unvouched entry for a given barcode
+     * @notice Processes the last unvouched entry for a given barcode
      * @param barcode user's barcode
      */
     function processUnvouched(string calldata barcode) external {
         VouchData[] memory vouches = unvouched[barcode];
+        require(vouches.length > 0);
+        VouchData memory vouchData = vouches[vouches.length-1];
+        unvouched[barcode].pop();
+        _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
+    }
+
+    /**
+     * @notice Processes all the unvouched entries for a given barcode
+     * @param barcode user's barcode
+     */
+    function processAllUnvouched(string calldata barcode) external {
+        VouchData[] memory vouches = unvouched[barcode];
+        require(vouches.length > 0);
         uint256 i;
         for(; i < vouches.length;) {
             VouchData memory vouchData = vouches[i];
@@ -95,9 +107,6 @@ contract Bolivares is
         }
         
         delete unvouched[barcode];
-        // VouchData memory vouchData = vouches[vouches.length-1];
-        // unvouched[barcode].pop();
-        // _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
     }
 
     /**
