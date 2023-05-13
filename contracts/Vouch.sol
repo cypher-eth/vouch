@@ -52,15 +52,15 @@ contract Vouch {
     //     return _vouch(recipient,message, sender);
     // }
 
-    function vouchOffchain(bytes32 vouchId) external nonreentrant returns (bool success) {
-        return _updateVouch(vouchId, msg.sender);
-    }
+    // function vouchOffchain(bytes32 vouchId) external nonreentrant returns (bool success) {
+    //     return _updateVouch(vouchId, msg.sender);
+    // }
 
-    function vouchOffchainFromSig(bytes32 vouchId, bytes calldata sig) external nonreentrant returns (bool success) {
-        address sender = ecrecoverFromSig(vouchId, sig);
-        require(address(0) != sender, "Invalid vouch signature");
-        return _updateVouch(vouchId, sender);
-    }
+    // function vouchOffchainFromSig(bytes32 vouchId, bytes calldata sig) external nonreentrant returns (bool success) {
+    //     address sender = ecrecoverFromSig(vouchId, sig);
+    //     require(address(0) != sender, "Invalid vouch signature");
+    //     return _updateVouch(vouchId, sender);
+    // }
 
     function _vouch(address recipient, string memory message, address sender) internal returns (bool success) {
         bytes32 hashed = generateVouchHash(sender,recipient,message);
