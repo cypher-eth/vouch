@@ -8,10 +8,11 @@ import "./Utils/Documents.sol";
 import "./Vouch.sol";
 
 
-contract Bolivares is Documents, 
-    ERC721S("Test Bolivares", "VIBES"), BolivaresDescriptor
-
- {
+contract Bolivares is 
+    Documents, 
+    ERC721S("Test Bolivares", "VIBES"), 
+    BolivaresDescriptor
+{
     using BokkyPooBahsDateTimeLibrary for uint;
     string public constant VOUCH_NAME = "Zuzalu Bolivares";
     bytes32 public constant VOUCH_ID = keccak256("VOUCH");
@@ -25,6 +26,7 @@ contract Bolivares is Documents,
 
     /// @notice Mapping from vouchId => vouch info.
     mapping (bytes32 => VouchInfo) public vouchInfo;
+    /// @notice Mapping from vouchId => vouch message.
     mapping (bytes32 => string) public vouchMsg;
     /// @notice Mapping from user => user info.
     mapping (address => bytes32[]) public userInfo;
@@ -50,50 +52,67 @@ contract Bolivares is Documents,
     mapping (address  =>  mapping(address  => bool)) public doesVouch;
     mapping (string  => VouchData[]) public unvouched;
 
-    /// @dev reentrancy guard
-    uint8 internal constant _not_entered = 1;
-    uint8 internal constant _entered = 2;
-    uint8 internal _entered_state;
-
-    modifier nonreentrant() {
-        require(_entered_state == _not_entered);
-        _entered_state = _entered;
-        _;
-        _entered_state = _not_entered;
-    }
-
-
-
-
     // //  ------------------------------------------------------------------------
     // // Register
     // // ------------------------------------------------------------------------
 
     // TODO: add barcode count? not sure if useful/scaleable
-
-    // User register themselves
-    function register (string calldata barcode) external {
+    /**
+     * @notice Registers a user by barcode
+     * @param barcode user's unique barcode to register
+     */
+    function register(string calldata barcode) external {
         require(barcodes[barcode] == address(0), "Cannot register same bill twice");
         barcodes[barcode] = msg.sender;
         userBarcode[msg.sender] = barcode;
     }
 
-    function unregister (string calldata barcode) external {
+    /**
+     * @notice Unregister user
+     * @param barcode user's barcode
+     */
+    function unregister(string calldata barcode) external {
         require(barcodes[barcode] == msg.sender);
         // require(userBarcode[msg.sender] == barcode);
         barcodes[barcode] = address(0);
         userBarcode[msg.sender] = "";
     }
 
-    // if there is an array of unvouched, process the array in chunks
+    /**
+     * @notice Processes the last unvouched entry for a given barcode
+     * @param barcode user's barcode
+     */
     function processUnvouched(string calldata barcode) external {
         VouchData[] memory vouches = unvouched[barcode];
         require(vouches.length > 0);
-        VouchData memory vouchData = unvouched[barcode][vouches.length-1];
+        VouchData memory vouchData = vouches[vouches.length-1];
         unvouched[barcode].pop();
         _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
     }
 
+    /**
+     * @notice Processes all the unvouched entries for a given barcode
+     * @param barcode user's barcode
+     */
+    function processAllUnvouched(string calldata barcode) external {
+        VouchData[] memory vouches = unvouched[barcode];
+        require(vouches.length > 0);
+        uint256 i;
+        for(; i < vouches.length;) {
+            VouchData memory vouchData = vouches[i];
+            _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
+            unchecked {
+                i++;
+            }
+        }
+        
+        delete unvouched[barcode];
+    }
+
+    /**
+     * @param barcode user's barcode
+     * @return number of unvouched vounches for the given barcode
+     */
     function unvouchedCount(string calldata barcode) external view returns (uint) {
         VouchData[] memory vouches = unvouched[barcode];
         return vouches.length;
@@ -103,14 +122,17 @@ contract Bolivares is Documents,
     // // Vouch
     // // ------------------------------------------------------------------------
 
-    /// @notice Generates hash 
-    function generateVouchHash(address sender, address recipient, string memory message) public view returns (bytes32 hash) {
-        hash = keccak256(abi.encode(address(this), VOUCH_ID, sender, recipient, message));
-    }
-
+    /**
+     * @notice Vouches for the user associated with a barcode
+     * @param barcode barcode of the user for whom to vouch
+     * @param message message to associate with the vouch
+     * @return true if success
+     */    
     function vouch(string memory barcode, string calldata message) external returns (bool success) {
         address sender = msg.sender;
         address recipient = barcodes[barcode];
+
+        require(sender != recipient, "Vouch for yourself is not allowed");
 
         // require(userBarcode[sender] == barcode);
         if (recipient == address(0)) {
@@ -131,24 +153,41 @@ contract Bolivares is Documents,
         return vouchCount[user];
     }
 
-    function _vouch(address recipient, string memory message, address sender) internal returns (bool success) {
+
+    /**
+     * @notice Creates a new vouch for a recipient
+     * @param recipient address of the user for whom to vouch
+     * @param message message of the vouch
+     * @param sender address of the voucher
+     */    
+    function _vouch(address recipient, string memory message, address sender) internal {
         bytes32 hashed = generateVouchHash(sender,recipient,message);
 
         // Update vouch
         _updateVouch(hashed, sender); 
         vouchMsg[hashed] = message;
-
-        return true;
     }
 
-    function _updateVouch(bytes32 vouchId, address sender) private returns (bool success) {
+    /**
+     * @dev Internal function to update an existing vouch or create a new one
+     * @param vouchId ID of the vouch
+     * @param sender address of the voucher
+     */    
+    function _updateVouch(bytes32 vouchId, address sender) private {
         if ( vouchInfo[vouchId].lastUpdateTime == 0 ) { 
             userInfo[sender].push(vouchId);
         }
         vouchInfo[vouchId] = VouchInfo(sender, uint48(block.timestamp), 0);
-        return true;
     }
 
+
+    /**
+     * @dev Internal function to to mint a new vouch
+     * @param sender address of the sender creating the vouch
+     * @param recipient voucher recipient address
+     * @param vouchId ID of the vouch
+     * @param message message of the vouch.
+     */
     function _mintVouch(address sender, address recipient, string memory message) internal {
         if (!doesVouch[sender][recipient]) {
             doesVouch[sender][recipient] = true;
@@ -156,7 +195,7 @@ contract Bolivares is Documents,
         }
 
         bytes32 vouchId = generateVouchHash(sender, recipient, message);
-        _vouch(recipient, message, sender);
+        _vouch(recipient, message, sender, vouchId);
 
         // Mint onchain vouch, if not exists
         uint256 tokenId = vouchToken[vouchId];
@@ -172,10 +211,18 @@ contract Bolivares is Documents,
     // Revoke
     // ------------------------------------------------------------------------
 
-    function revoke( bytes32 vouchId) external returns (bool success) {
+    /**
+     * @notice Revokes a voucher by vouchId
+     * @param vouchId ID of the vouch
+     */
+    function revoke(bytes32 vouchId) external returns (bool success) {
         return _revoke(vouchId, msg.sender );
     }
 
+    /**
+     * @notice Revokes a voucher by vouchId
+     * @param vouchId ID of the vouch
+     */
     function _revoke( bytes32 vouchId, address sender) private returns (bool success) {
         require(vouchInfo[vouchId].sender == sender, "Sender did not vouch");
         vouchInfo[vouchId].revokedTime = uint48(block.timestamp);
