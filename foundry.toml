@@ -1,0 +1,11 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+gas_reports = ["Vouch"]
+fs_permissions = [{ access = "read-write", path = "./"}]
+
+[rpc_endpoints]
+goerli = "${GOERLI_RPC_URL}"
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config

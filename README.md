@@ -19,6 +19,7 @@ A vouch can be from one address about itself. This can be used for recording gen
 
 ## Testing
 
+## Using Ape
 #### Run Tests
 Test suite is handed by [apeworx.io](https://apeworx.io)
 
@@ -41,3 +42,24 @@ Use ape to deploy to any network. If you've configured ape correctly, you can ru
 ```
 ape run deploy --network=ethereum:goerli
 ```
+
+## Using Foundry
+
+### Test
+```sh
+forge t -vvv
+```
+
+### Deploy
+
+```sh
+export ETHERSCAN_API_KEY=key
+export GOERLI_RPC_URL=key
+```
+
+```sh
+forge script script/deployment/Deploy.s.sol --broadcast --rpc-url ${GOERLI_RPC_URL} -vvv
+```
+
+add `--verify` flag to verify contracts
+

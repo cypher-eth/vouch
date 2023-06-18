@@ -1,0 +1,276 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "initContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "init(bytes)": "4ddf47d4",
+    "initContract(bytes)": "4d806abd"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"init\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"initContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"init(bytes)\":{\"params\":{\"data\":\"Can be abi encoded arguments or anything else.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"init(bytes)\":{\"notice\":\"Init function that gets called from `BoringFactory.deploy`. Also kown as the constructor for cloned contracts. Any ETH send to `BoringFactory.deploy` ends up here.\"},\"initContract(bytes)\":{\"notice\":\"Init function that gets called from `BoringFactory.deploy`. Also kown as the constructor for cloned contracts.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Interfaces/IContract.sol\":\"IContract\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Interfaces/IContract.sol\":{\"keccak256\":\"0x6894a7508bb202319fa3c68a7d2a0aa98b5371c744a0e1cc70d15cdd0c2ffb3c\",\"urls\":[\"bzz-raw://211904592e098aec543787918a804d800c80f8a813f6e283202b6a16af81b704\",\"dweb:/ipfs/QmUqKACNPgyXdrpEwG2cjTgcLpC2QrtAdTEFrUu3cNpjx5\"]},\"contracts/Interfaces/IMasterContract.sol\":{\"keccak256\":\"0x2f84d40e7a3ee976557270f22ae6d06a7bf21ef983f071c756e93a2138574003\",\"urls\":[\"bzz-raw://21c3b9f116e86467a15fdcdfe737db361ba336f033c25df26094f58c633dc9fa\",\"dweb:/ipfs/Qme2UEugeoB3QDm2DQb2peKm87WxzSNJVaB2YFdJqHk2B1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "init"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initContract"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "init(bytes)": {
+            "params": {
+              "data": "Can be abi encoded arguments or anything else."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "init(bytes)": {
+            "notice": "Init function that gets called from `BoringFactory.deploy`. Also kown as the constructor for cloned contracts. Any ETH send to `BoringFactory.deploy` ends up here."
+          },
+          "initContract(bytes)": {
+            "notice": "Init function that gets called from `BoringFactory.deploy`. Also kown as the constructor for cloned contracts."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/Interfaces/IContract.sol": "IContract"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/Interfaces/IContract.sol": {
+        "keccak256": "0x6894a7508bb202319fa3c68a7d2a0aa98b5371c744a0e1cc70d15cdd0c2ffb3c",
+        "urls": [
+          "bzz-raw://211904592e098aec543787918a804d800c80f8a813f6e283202b6a16af81b704",
+          "dweb:/ipfs/QmUqKACNPgyXdrpEwG2cjTgcLpC2QrtAdTEFrUu3cNpjx5"
+        ],
+        "license": null
+      },
+      "contracts/Interfaces/IMasterContract.sol": {
+        "keccak256": "0x2f84d40e7a3ee976557270f22ae6d06a7bf21ef983f071c756e93a2138574003",
+        "urls": [
+          "bzz-raw://21c3b9f116e86467a15fdcdfe737db361ba336f033c25df26094f58c633dc9fa",
+          "dweb:/ipfs/Qme2UEugeoB3QDm2DQb2peKm87WxzSNJVaB2YFdJqHk2B1"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/Interfaces/IContract.sol",
+    "id": 2145,
+    "exportedSymbols": {
+      "IContract": [
+        2144
+      ],
+      "IMasterContract": [
+        2153
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:298:5",
+    "nodes": [
+      {
+        "id": 2134,
+        "nodeType": "PragmaDirective",
+        "src": "0:24:5",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 2135,
+        "nodeType": "ImportDirective",
+        "src": "26:31:5",
+        "nodes": [],
+        "absolutePath": "contracts/Interfaces/IMasterContract.sol",
+        "file": "./IMasterContract.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2145,
+        "sourceUnit": 2154,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 2144,
+        "nodeType": "ContractDefinition",
+        "src": "59:238:5",
+        "nodes": [
+          {
+            "id": 2143,
+            "nodeType": "FunctionDefinition",
+            "src": "240:54:5",
+            "nodes": [],
+            "documentation": {
+              "id": 2138,
+              "nodeType": "StructuredDocumentation",
+              "src": "104:131:5",
+              "text": "@notice Init function that gets called from `BoringFactory.deploy`.\n Also kown as the constructor for cloned contracts."
+            },
+            "functionSelector": "4d806abd",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initContract",
+            "nameLocation": "249:12:5",
+            "parameters": {
+              "id": 2141,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2140,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "278:4:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2143,
+                  "src": "263:19:5",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 2139,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "263:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "261:23:5"
+            },
+            "returnParameters": {
+              "id": 2142,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "293:0:5"
+            },
+            "scope": 2144,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 2136,
+              "name": "IMasterContract",
+              "nameLocations": [
+                "82:15:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2153,
+              "src": "82:15:5"
+            },
+            "id": 2137,
+            "nodeType": "InheritanceSpecifier",
+            "src": "82:15:5"
+          }
+        ],
+        "canonicalName": "IContract",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          2144,
+          2153
+        ],
+        "name": "IContract",
+        "nameLocation": "69:9:5",
+        "scope": 2145,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 5
+}

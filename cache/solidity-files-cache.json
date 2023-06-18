@@ -1,0 +1,691 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "contracts",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "contracts/Bolivares.sol": {
+      "lastModificationDate": 1687093366300,
+      "contentHash": "e8adc627b0eb5f743818853713eabf3b",
+      "sourceName": "contracts/Bolivares.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Descriptors/BolivaresDescriptor.sol",
+        "contracts/Descriptors/NFTDescriptor.sol",
+        "contracts/Tokens/ERC721S.sol",
+        "contracts/Utils/Base64.sol",
+        "contracts/Utils/BokkyPooBahsDateTimeLibrary.sol",
+        "contracts/Utils/Documents.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "Bolivares": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Bolivares.sol/Bolivares.json"
+        }
+      }
+    },
+    "contracts/BolivaresOld.sol": {
+      "lastModificationDate": 1686990578997,
+      "contentHash": "764fbb5520357df0974ebfc5de1e79c4",
+      "sourceName": "contracts/BolivaresOld.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "BolivaresOld": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "BolivaresOld.sol/BolivaresOld.json"
+        }
+      }
+    },
+    "contracts/Descriptors/BolivaresDescriptor.sol": {
+      "lastModificationDate": 1686990600460,
+      "contentHash": "d464a00c131b2b9ba356e48063e168e8",
+      "sourceName": "contracts/Descriptors/BolivaresDescriptor.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Descriptors/NFTDescriptor.sol",
+        "contracts/Utils/Base64.sol",
+        "contracts/Utils/BokkyPooBahsDateTimeLibrary.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "BolivaresDescriptor": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "BolivaresDescriptor.sol/BolivaresDescriptor.json"
+        }
+      }
+    },
+    "contracts/Descriptors/NFTDescriptor.sol": {
+      "lastModificationDate": 1687008626724,
+      "contentHash": "2a96547e50b69ee5e7c0fdb547caedc5",
+      "sourceName": "contracts/Descriptors/NFTDescriptor.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Utils/Base64.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "NFTDescriptor": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "NFTDescriptor.sol/NFTDescriptor.json"
+        }
+      }
+    },
+    "contracts/Descriptors/VouchDescriptor.sol": {
+      "lastModificationDate": 1686990600477,
+      "contentHash": "34ca2b2031369029d32c4aea75cc38ad",
+      "sourceName": "contracts/Descriptors/VouchDescriptor.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Descriptors/NFTDescriptor.sol",
+        "contracts/Utils/Base64.sol",
+        "contracts/Utils/BokkyPooBahsDateTimeLibrary.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "VouchDescriptor": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "VouchDescriptor.sol/VouchDescriptor.json"
+        }
+      }
+    },
+    "contracts/Interfaces/IContract.sol": {
+      "lastModificationDate": 1686990600459,
+      "contentHash": "da75aebbb291ccb7c271a429962f6fe6",
+      "sourceName": "contracts/Interfaces/IContract.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Interfaces/IMasterContract.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "IContract": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "IContract.sol/IContract.json"
+        }
+      }
+    },
+    "contracts/Interfaces/IMasterContract.sol": {
+      "lastModificationDate": 1686990600459,
+      "contentHash": "b90e4fdf61d09a6378cc6cec21b5a95b",
+      "sourceName": "contracts/Interfaces/IMasterContract.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "IMasterContract": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "IMasterContract.sol/IMasterContract.json"
+        }
+      }
+    },
+    "contracts/Interfaces/ITokenURIFetcher.sol": {
+      "lastModificationDate": 1686990600459,
+      "contentHash": "0e925d6674719c5db9348fedd75d2725",
+      "sourceName": "contracts/Interfaces/ITokenURIFetcher.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "ITokenURIFetcher": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ITokenURIFetcher.sol/ITokenURIFetcher.json"
+        }
+      }
+    },
+    "contracts/Tokens/ERC721.sol": {
+      "lastModificationDate": 1686990600459,
+      "contentHash": "8c50370f8a58dd5f21faf567a8bdb301",
+      "sourceName": "contracts/Tokens/ERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "ERC721": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC721.sol/ERC721.json"
+        },
+        "ERC721TokenReceiver": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC721.sol/ERC721TokenReceiver.json"
+        }
+      }
+    },
+    "contracts/Tokens/ERC721S.sol": {
+      "lastModificationDate": 1686990600459,
+      "contentHash": "f075c77482a0c7403ce243d69df8e4a5",
+      "sourceName": "contracts/Tokens/ERC721S.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "ERC721S": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC721S.sol/ERC721S.json"
+        },
+        "ERC721TokenReceiver": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "ERC721S.sol/ERC721TokenReceiver.json"
+        }
+      }
+    },
+    "contracts/Utils/Base64.sol": {
+      "lastModificationDate": 1686990600422,
+      "contentHash": "38f650fe4089957fe7e1b1fc27da5eae",
+      "sourceName": "contracts/Utils/Base64.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "Base64": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Base64.sol/Base64.json"
+        }
+      }
+    },
+    "contracts/Utils/BokkyPooBahsDateTimeLibrary.sol": {
+      "lastModificationDate": 1686990600422,
+      "contentHash": "f0b159e4cea350caed48592c32cda9bc",
+      "sourceName": "contracts/Utils/BokkyPooBahsDateTimeLibrary.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "BokkyPooBahsDateTimeLibrary": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "BokkyPooBahsDateTimeLibrary.sol/BokkyPooBahsDateTimeLibrary.json"
+        }
+      }
+    },
+    "contracts/Utils/Documents.sol": {
+      "lastModificationDate": 1687009506253,
+      "contentHash": "57cb698bf193156b6e409c45f7045f8e",
+      "sourceName": "contracts/Utils/Documents.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "Documents": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Documents.sol/Documents.json"
+        }
+      }
+    },
+    "contracts/Vouch.sol": {
+      "lastModificationDate": 1686990627242,
+      "contentHash": "15c870f857391148c176641b5086923f",
+      "sourceName": "contracts/Vouch.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Utils/BokkyPooBahsDateTimeLibrary.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "Vouch": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Vouch.sol/Vouch.json"
+        }
+      }
+    },
+    "contracts/VouchNFT.sol": {
+      "lastModificationDate": 1686990578997,
+      "contentHash": "a98384a8e9f3439120c6535a8a4a231a",
+      "sourceName": "contracts/VouchNFT.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts/Descriptors/NFTDescriptor.sol",
+        "contracts/Descriptors/VouchDescriptor.sol",
+        "contracts/Tokens/ERC721S.sol",
+        "contracts/Utils/Base64.sol",
+        "contracts/Utils/BokkyPooBahsDateTimeLibrary.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "Vouch": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "VouchNFT.sol/Vouch.json"
+        },
+        "VouchNFT": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "VouchNFT.sol/VouchNFT.json"
+        }
+      }
+    },
+    "test/BaseTest.t.sol": {
+      "lastModificationDate": 1687107061306,
+      "contentHash": "15a4693ec9a4528ad1cc14e8176e0e27",
+      "sourceName": "test/BaseTest.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": null,
+      "artifacts": {
+        "BaseTest.t": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "BaseTest.t.sol/BaseTest.t.json"
+        }
+      }
+    }
+  }
+}

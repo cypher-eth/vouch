@@ -1,0 +1,232 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "fetchTokenURIData",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "fetchTokenURIData(uint256)": "c981fac4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"fetchTokenURIData\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Interfaces/ITokenURIFetcher.sol\":\"ITokenURIFetcher\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Interfaces/ITokenURIFetcher.sol\":{\"keccak256\":\"0x77790b6603b679a4796e21d5c6adf35a36926825440bfc60084a2a58b2215fcd\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://8a1d62996db5ab7cfeafede849f52d90a1ea437ef1020fe8b313b6c7dafd67c7\",\"dweb:/ipfs/Qmbd1vJEA2QYSDhFkFBwH2rYeGeTRYdxHrNVuqJ4Nq6baq\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "fetchTokenURIData",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/Interfaces/ITokenURIFetcher.sol": "ITokenURIFetcher"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/Interfaces/ITokenURIFetcher.sol": {
+        "keccak256": "0x77790b6603b679a4796e21d5c6adf35a36926825440bfc60084a2a58b2215fcd",
+        "urls": [
+          "bzz-raw://8a1d62996db5ab7cfeafede849f52d90a1ea437ef1020fe8b313b6c7dafd67c7",
+          "dweb:/ipfs/Qmbd1vJEA2QYSDhFkFBwH2rYeGeTRYdxHrNVuqJ4Nq6baq"
+        ],
+        "license": "GPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/Interfaces/ITokenURIFetcher.sol",
+    "id": 2164,
+    "exportedSymbols": {
+      "ITokenURIFetcher": [
+        2163
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:163:7",
+    "nodes": [
+      {
+        "id": 2155,
+        "nodeType": "PragmaDirective",
+        "src": "46:24:7",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 2163,
+        "nodeType": "ContractDefinition",
+        "src": "72:136:7",
+        "nodes": [
+          {
+            "id": 2162,
+            "nodeType": "FunctionDefinition",
+            "src": "105:101:7",
+            "nodes": [],
+            "functionSelector": "c981fac4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fetchTokenURIData",
+            "nameLocation": "114:17:7",
+            "parameters": {
+              "id": 2158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2157,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "140:2:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2162,
+                  "src": "132:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2156,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "132:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "131:12:7"
+            },
+            "returnParameters": {
+              "id": 2161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2160,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2162,
+                  "src": "191:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2159,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "190:15:7"
+            },
+            "scope": 2163,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ITokenURIFetcher",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          2163
+        ],
+        "name": "ITokenURIFetcher",
+        "nameLocation": "82:16:7",
+        "scope": 2164,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-3.0-or-later"
+  },
+  "id": 7
+}

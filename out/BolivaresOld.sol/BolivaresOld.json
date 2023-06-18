@@ -1,0 +1,33 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "contracts/BolivaresOld.sol",
+    "id": 885,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "0:5980:1",
+    "nodes": [
+      {
+        "id": 884,
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".16"
+        ]
+      }
+    ]
+  },
+  "id": 1
+}

@@ -1,0 +1,958 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "image",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "attributes",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct NFTDescriptor.TokenURIParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "constructTokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061061a806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806392b4c81b14610030575b600080fd5b61004361003e3660046102f2565b610059565b60405161005091906103ef565b60405180910390f35b606061009982600001518360200151846040015185606001516040516020016100859493929190610422565b6040516020818303038152906040526100bf565b6040516020016100a991906104f7565b6040516020818303038152906040529050919050565b606081516000036100de57505060408051602081019091526000815290565b60006040518060600160405280604081526020016105a5604091399050600060038451600261010d9190610552565b610117919061056b565b61012290600461058d565b90506000610131826020610552565b67ffffffffffffffff81111561014957610149610226565b6040519080825280601f01601f191660200182016040528015610173576020820181803683370190505b509050818152600183018586518101602084015b818310156101e15760039283018051603f601282901c811687015160f890811b8552600c83901c8216880151811b6001860152600683901c8216880151811b60028601529116860151901b93820193909352600401610187565b6003895106600181146101fb576002811461020c57610218565b613d3d60f01b600119830152610218565b603d60f81b6000198301525b509398975050505050505050565b634e487b7160e01b600052604160045260246000fd5b6040516080810167ffffffffffffffff8111828210171561025f5761025f610226565b60405290565b600082601f83011261027657600080fd5b813567ffffffffffffffff8082111561029157610291610226565b604051601f8301601f19908116603f011681019082821181831017156102b9576102b9610226565b816040528381528660208588010111156102d257600080fd5b836020870160208301376000602085830101528094505050505092915050565b60006020828403121561030457600080fd5b813567ffffffffffffffff8082111561031c57600080fd5b908301906080828603121561033057600080fd5b61033861023c565b82358281111561034757600080fd5b61035387828601610265565b82525060208301358281111561036857600080fd5b61037487828601610265565b60208301525060408301358281111561038c57600080fd5b61039887828601610265565b6040830152506060830135828111156103b057600080fd5b6103bc87828601610265565b60608301525095945050505050565b60005b838110156103e65781810151838201526020016103ce565b50506000910152565b602081526000825180602084015261040e8160408501602087016103cb565b601f01601f19169190910160400192915050565b683d913730b6b2911d1160b91b81528451600090610447816009850160208a016103cb565b71111610113232b9b1b934b83a34b7b7111d1160711b600991840191820152855161047981601b840160208a016103cb565b6c1116101134b6b0b3b2911d101160991b601b929091019182015284516104a78160288401602089016103cb565b71222c202261747472696275746573223a205b60701b6028929091019182015283516104da81603a8401602088016103cb565b615d7d60f01b603a9290910191820152603c019695505050505050565b7f646174613a6170706c69636174696f6e2f6a736f6e3b6261736536342c00000081526000825161052f81601d8501602087016103cb565b91909101601d0192915050565b634e487b7160e01b600052601160045260246000fd5b808201808211156105655761056561053c565b92915050565b60008261058857634e487b7160e01b600052601260045260246000fd5b500490565b80820281158282048414176105655761056561053c56fe4142434445464748494a4b4c4d4e4f505152535455565758595a6162636465666768696a6b6c6d6e6f707172737475767778797a303132333435363738392b2fa26469706673582212205440266e2d7afc66d004bdbea7d8335c87c770e45073881cdb28c6d54279ba1264736f6c63430008110033",
+    "sourceMap": "186:1497:3:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806392b4c81b14610030575b600080fd5b61004361003e3660046102f2565b610059565b60405161005091906103ef565b60405180910390f35b606061009982600001518360200151846040015185606001516040516020016100859493929190610422565b6040516020818303038152906040526100bf565b6040516020016100a991906104f7565b6040516020818303038152906040529050919050565b606081516000036100de57505060408051602081019091526000815290565b60006040518060600160405280604081526020016105a5604091399050600060038451600261010d9190610552565b610117919061056b565b61012290600461058d565b90506000610131826020610552565b67ffffffffffffffff81111561014957610149610226565b6040519080825280601f01601f191660200182016040528015610173576020820181803683370190505b509050818152600183018586518101602084015b818310156101e15760039283018051603f601282901c811687015160f890811b8552600c83901c8216880151811b6001860152600683901c8216880151811b60028601529116860151901b93820193909352600401610187565b6003895106600181146101fb576002811461020c57610218565b613d3d60f01b600119830152610218565b603d60f81b6000198301525b509398975050505050505050565b634e487b7160e01b600052604160045260246000fd5b6040516080810167ffffffffffffffff8111828210171561025f5761025f610226565b60405290565b600082601f83011261027657600080fd5b813567ffffffffffffffff8082111561029157610291610226565b604051601f8301601f19908116603f011681019082821181831017156102b9576102b9610226565b816040528381528660208588010111156102d257600080fd5b836020870160208301376000602085830101528094505050505092915050565b60006020828403121561030457600080fd5b813567ffffffffffffffff8082111561031c57600080fd5b908301906080828603121561033057600080fd5b61033861023c565b82358281111561034757600080fd5b61035387828601610265565b82525060208301358281111561036857600080fd5b61037487828601610265565b60208301525060408301358281111561038c57600080fd5b61039887828601610265565b6040830152506060830135828111156103b057600080fd5b6103bc87828601610265565b60608301525095945050505050565b60005b838110156103e65781810151838201526020016103ce565b50506000910152565b602081526000825180602084015261040e8160408501602087016103cb565b601f01601f19169190910160400192915050565b683d913730b6b2911d1160b91b81528451600090610447816009850160208a016103cb565b71111610113232b9b1b934b83a34b7b7111d1160711b600991840191820152855161047981601b840160208a016103cb565b6c1116101134b6b0b3b2911d101160991b601b929091019182015284516104a78160288401602089016103cb565b71222c202261747472696275746573223a205b60701b6028929091019182015283516104da81603a8401602088016103cb565b615d7d60f01b603a9290910191820152603c019695505050505050565b7f646174613a6170706c69636174696f6e2f6a736f6e3b6261736536342c00000081526000825161052f81601d8501602087016103cb565b91909101601d0192915050565b634e487b7160e01b600052601160045260246000fd5b808201808211156105655761056561053c565b92915050565b60008261058857634e487b7160e01b600052601260045260246000fd5b500490565b80820281158282048414176105655761056561053c56fe4142434445464748494a4b4c4d4e4f505152535455565758595a6162636465666768696a6b6c6d6e6f707172737475767778797a303132333435363738392b2fa26469706673582212205440266e2d7afc66d004bdbea7d8335c87c770e45073881cdb28c6d54279ba1264736f6c63430008110033",
+    "sourceMap": "186:1497:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;410:566;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;512:13;678:267;774:6;:11;;;809:6;:18;;;846:6;:12;;;881:6;:17;;;744:161;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;678:13;:267::i;:::-;595:364;;;;;;;;:::i;:::-;;;;;;;;;;;;;568:401;;410:566;;;:::o;286:1985:10:-;344:13;373:4;:11;388:1;373:16;369:31;;-1:-1:-1;;391:9:10;;;;;;;;;-1:-1:-1;391:9:10;;;286:1985::o;369:31::-;457:19;479:5;;;;;;;;;;;;;;;;;457:27;;533:18;579:1;560:4;:11;574:1;560:15;;;;:::i;:::-;559:21;;;;:::i;:::-;554:27;;:1;:27;:::i;:::-;533:48;-1:-1:-1;661:20:10;695:15;533:48;708:2;695:15;:::i;:::-;684:27;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;684:27:10;;661:50;;804:10;796:6;789:26;908:1;901:5;897:13;976:4;1026;1020:11;1011:7;1007:25;1131:2;1123:6;1119:15;1213:794;1232:6;1223:7;1220:19;1213:794;;;1296:1;1283:15;;;1374:14;;1524:4;1512:2;1508:14;;;1504:25;;1490:40;;1484:47;1479:3;1475:57;;;1457:76;;1650:2;1646:14;;;1642:25;;1628:40;;1622:47;1613:57;;1577:1;1562:17;;1595:76;1789:1;1784:14;;;1780:25;;1766:40;;1760:47;1751:57;;1700:17;;;1733:76;1918:25;;1904:40;;1898:47;1889:57;;1838:17;;;1871:76;;;;1976:17;;1213:794;;;2089:1;2082:4;2076:11;2072:19;2109:1;2104:54;;;;2176:1;2171:52;;;;2065:158;;2104:54;-1:-1:-1;;;;;2120:17:10;;2113:43;2104:54;;2171:52;-1:-1:-1;;;;;2187:17:10;;2180:41;2065:158;-1:-1:-1;2258:6:10;;286:1985;-1:-1:-1;;;;;;;;286:1985:10:o;14:127:16:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:248;213:2;207:9;255:4;243:17;;290:18;275:34;;311:22;;;272:62;269:88;;;337:18;;:::i;:::-;373:2;366:22;146:248;:::o;399:719::-;442:5;495:3;488:4;480:6;476:17;472:27;462:55;;513:1;510;503:12;462:55;549:6;536:20;575:18;612:2;608;605:10;602:36;;;618:18;;:::i;:::-;693:2;687:9;661:2;747:13;;-1:-1:-1;;743:22:16;;;767:2;739:31;735:40;723:53;;;791:18;;;811:22;;;788:46;785:72;;;837:18;;:::i;:::-;877:10;873:2;866:22;912:2;904:6;897:18;958:3;951:4;946:2;938:6;934:15;930:26;927:35;924:55;;;975:1;972;965:12;924:55;1039:2;1032:4;1024:6;1020:17;1013:4;1005:6;1001:17;988:54;1086:1;1079:4;1074:2;1066:6;1062:15;1058:26;1051:37;1106:6;1097:15;;;;;;399:719;;;;:::o;1123:1130::-;1214:6;1267:2;1255:9;1246:7;1242:23;1238:32;1235:52;;;1283:1;1280;1273:12;1235:52;1323:9;1310:23;1352:18;1393:2;1385:6;1382:14;1379:34;;;1409:1;1406;1399:12;1379:34;1432:22;;;;1488:4;1470:16;;;1466:27;1463:47;;;1506:1;1503;1496:12;1463:47;1532:17;;:::i;:::-;1587:2;1574:16;1615:2;1605:8;1602:16;1599:36;;;1631:1;1628;1621:12;1599:36;1658:45;1695:7;1684:8;1680:2;1676:17;1658:45;:::i;:::-;1651:5;1644:60;;1750:2;1746;1742:11;1729:25;1779:2;1769:8;1766:16;1763:36;;;1795:1;1792;1785:12;1763:36;1831:45;1868:7;1857:8;1853:2;1849:17;1831:45;:::i;:::-;1826:2;1819:5;1815:14;1808:69;;1923:2;1919;1915:11;1902:25;1952:2;1942:8;1939:16;1936:36;;;1968:1;1965;1958:12;1936:36;2004:45;2041:7;2030:8;2026:2;2022:17;2004:45;:::i;:::-;1999:2;1992:5;1988:14;1981:69;;2096:2;2092;2088:11;2075:25;2125:2;2115:8;2112:16;2109:36;;;2141:1;2138;2131:12;2109:36;2177:45;2214:7;2203:8;2199:2;2195:17;2177:45;:::i;:::-;2172:2;2161:14;;2154:69;-1:-1:-1;2165:5:16;1123:1130;-1:-1:-1;;;;;1123:1130:16:o;2258:250::-;2343:1;2353:113;2367:6;2364:1;2361:13;2353:113;;;2443:11;;;2437:18;2424:11;;;2417:39;2389:2;2382:10;2353:113;;;-1:-1:-1;;2500:1:16;2482:16;;2475:27;2258:250::o;2513:396::-;2662:2;2651:9;2644:21;2625:4;2694:6;2688:13;2737:6;2732:2;2721:9;2717:18;2710:34;2753:79;2825:6;2820:2;2809:9;2805:18;2800:2;2792:6;2788:15;2753:79;:::i;:::-;2893:2;2872:15;-1:-1:-1;;2868:29:16;2853:45;;;;2900:2;2849:54;;2513:396;-1:-1:-1;;2513:396:16:o;2914:1762::-;-1:-1:-1;;;3712:43:16;;3778:13;;3694:3;;3800:74;3778:13;3863:1;3854:11;;3847:4;3835:17;;3800:74;:::i;:::-;-1:-1:-1;;;3933:1:16;3893:16;;;3925:10;;;3918:68;4011:13;;4033:76;4011:13;4095:2;4087:11;;4080:4;4068:17;;4033:76;:::i;:::-;-1:-1:-1;;;4169:2:16;4128:17;;;;4161:11;;;4154:59;4238:13;;4260:76;4238:13;4322:2;4314:11;;4307:4;4295:17;;4260:76;:::i;:::-;-1:-1:-1;;;4396:2:16;4355:17;;;;4388:11;;;4381:69;4475:13;;4497:76;4475:13;4559:2;4551:11;;4544:4;4532:17;;4497:76;:::i;:::-;-1:-1:-1;;;4633:2:16;4592:17;;;;4625:11;;;4618:25;4667:2;4659:11;;2914:1762;-1:-1:-1;;;;;;2914:1762:16:o;4681:461::-;4943:31;4938:3;4931:44;4913:3;5004:6;4998:13;5020:75;5088:6;5083:2;5078:3;5074:12;5067:4;5059:6;5055:17;5020:75;:::i;:::-;5115:16;;;;5133:2;5111:25;;4681:461;-1:-1:-1;;4681:461:16:o;5147:127::-;5208:10;5203:3;5199:20;5196:1;5189:31;5239:4;5236:1;5229:15;5263:4;5260:1;5253:15;5279:125;5344:9;;;5365:10;;;5362:36;;;5378:18;;:::i;:::-;5279:125;;;;:::o;5409:217::-;5449:1;5475;5465:132;;5519:10;5514:3;5510:20;5507:1;5500:31;5554:4;5551:1;5544:15;5582:4;5579:1;5572:15;5465:132;-1:-1:-1;5611:9:16;;5409:217::o;5631:168::-;5704:9;;;5735;;5752:15;;;5746:22;;5732:37;5722:71;;5773:18;;:::i",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "constructTokenURI((string,string,string,string))": "92b4c81b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"image\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"attributes\",\"type\":\"string\"}],\"internalType\":\"struct NFTDescriptor.TokenURIParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"constructTokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructTokenURI((string,string,string,string))\":{\"notice\":\"Construct an ERC721 token URI.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Descriptors/NFTDescriptor.sol\":\"NFTDescriptor\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Descriptors/NFTDescriptor.sol\":{\"keccak256\":\"0x813184eb6c8b38ba6eea908014b8eb88e480b3b5d342dde389edfc809ca1daf2\",\"urls\":[\"bzz-raw://46043c8df17275c546092fdef4022ec79503408a0e7348f30e3cefc0d3b3425b\",\"dweb:/ipfs/Qmcs8C8u8d4fFBDsps7PtvFREaguL5n6TuJYezJqUKnTHf\"]},\"contracts/Utils/Base64.sol\":{\"keccak256\":\"0xd8decf9ee6789cb8afb33b9a7b6ed8a7d852211add4040ca080fa103cd797fcc\",\"urls\":[\"bzz-raw://490d1d09a5565911d1a436dfebf4de06cb04e8fe433145549eb4d49a60fe42af\",\"dweb:/ipfs/QmWAg3PCycKvt84ACxew8NjSKn4a6duzvqsxYfQYwWhWi1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct NFTDescriptor.TokenURIParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "description",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "image",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "attributes",
+                  "type": "string"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "constructTokenURI",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "constructTokenURI((string,string,string,string))": {
+            "notice": "Construct an ERC721 token URI."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/Descriptors/NFTDescriptor.sol": "NFTDescriptor"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/Descriptors/NFTDescriptor.sol": {
+        "keccak256": "0x813184eb6c8b38ba6eea908014b8eb88e480b3b5d342dde389edfc809ca1daf2",
+        "urls": [
+          "bzz-raw://46043c8df17275c546092fdef4022ec79503408a0e7348f30e3cefc0d3b3425b",
+          "dweb:/ipfs/Qmcs8C8u8d4fFBDsps7PtvFREaguL5n6TuJYezJqUKnTHf"
+        ],
+        "license": null
+      },
+      "contracts/Utils/Base64.sol": {
+        "keccak256": "0xd8decf9ee6789cb8afb33b9a7b6ed8a7d852211add4040ca080fa103cd797fcc",
+        "urls": [
+          "bzz-raw://490d1d09a5565911d1a436dfebf4de06cb04e8fe433145549eb4d49a60fe42af",
+          "dweb:/ipfs/QmWAg3PCycKvt84ACxew8NjSKn4a6duzvqsxYfQYwWhWi1"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/Descriptors/NFTDescriptor.sol",
+    "id": 1540,
+    "exportedSymbols": {
+      "Base64": [
+        3154
+      ],
+      "NFTDescriptor": [
+        1539
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "113:1570:3",
+    "nodes": [
+      {
+        "id": 1487,
+        "nodeType": "PragmaDirective",
+        "src": "113:24:3",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".16"
+        ]
+      },
+      {
+        "id": 1489,
+        "nodeType": "ImportDirective",
+        "src": "139:45:3",
+        "nodes": [],
+        "absolutePath": "contracts/Utils/Base64.sol",
+        "file": "../Utils/Base64.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 1540,
+        "sourceUnit": 3155,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 1488,
+              "name": "Base64",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3154,
+              "src": "148:6:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 1539,
+        "nodeType": "ContractDefinition",
+        "src": "186:1497:3",
+        "nodes": [
+          {
+            "id": 1498,
+            "nodeType": "StructDefinition",
+            "src": "215:127:3",
+            "nodes": [],
+            "canonicalName": "NFTDescriptor.TokenURIParams",
+            "members": [
+              {
+                "constant": false,
+                "id": 1491,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "254:4:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1498,
+                "src": "247:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1490,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "247:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1493,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "275:11:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1498,
+                "src": "268:18:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1492,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "268:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1495,
+                "mutability": "mutable",
+                "name": "image",
+                "nameLocation": "303:5:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1498,
+                "src": "296:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1494,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "296:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1497,
+                "mutability": "mutable",
+                "name": "attributes",
+                "nameLocation": "325:10:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 1498,
+                "src": "318:17:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1496,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "318:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "TokenURIParams",
+            "nameLocation": "222:14:3",
+            "scope": 1539,
+            "visibility": "public"
+          },
+          {
+            "id": 1538,
+            "nodeType": "FunctionDefinition",
+            "src": "410:566:3",
+            "nodes": [],
+            "body": {
+              "id": 1537,
+              "nodeType": "Block",
+              "src": "531:445:3",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "646174613a6170706c69636174696f6e2f6a736f6e3b6261736536342c",
+                            "id": 1511,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "629:31:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_bccab2d885f86fda81bfd84dd4248d31f8073b473d187111d36536db073076fa",
+                              "typeString": "literal_string \"data:application/json;base64,\""
+                            },
+                            "value": "data:application/json;base64,"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "arguments": [
+                                  {
+                                    "arguments": [
+                                      {
+                                        "hexValue": "7b226e616d65223a22",
+                                        "id": 1518,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "kind": "string",
+                                        "lValueRequested": false,
+                                        "nodeType": "Literal",
+                                        "src": "761:11:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_stringliteral_14271abadab347880c45d45d3abf3dce36bb4aa23c658e4207d08ac9b3f38832",
+                                          "typeString": "literal_string \"{\"name\":\"\""
+                                        },
+                                        "value": "{\"name\":\""
+                                      },
+                                      {
+                                        "expression": {
+                                          "id": 1519,
+                                          "name": "params",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 1502,
+                                          "src": "774:6:3",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_TokenURIParams_$1498_memory_ptr",
+                                            "typeString": "struct NFTDescriptor.TokenURIParams memory"
+                                          }
+                                        },
+                                        "id": 1520,
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberLocation": "781:4:3",
+                                        "memberName": "name",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": 1491,
+                                        "src": "774:11:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        }
+                                      },
+                                      {
+                                        "hexValue": "222c20226465736372697074696f6e223a22",
+                                        "id": 1521,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "kind": "string",
+                                        "lValueRequested": false,
+                                        "nodeType": "Literal",
+                                        "src": "787:20:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_stringliteral_9780691b4087a1893a28b24020f5f6d0c7583060bd6cfeb54b8284a5bf55f11f",
+                                          "typeString": "literal_string \"\", \"description\":\"\""
+                                        },
+                                        "value": "\", \"description\":\""
+                                      },
+                                      {
+                                        "expression": {
+                                          "id": 1522,
+                                          "name": "params",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 1502,
+                                          "src": "809:6:3",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_TokenURIParams_$1498_memory_ptr",
+                                            "typeString": "struct NFTDescriptor.TokenURIParams memory"
+                                          }
+                                        },
+                                        "id": 1523,
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberLocation": "816:11:3",
+                                        "memberName": "description",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": 1493,
+                                        "src": "809:18:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        }
+                                      },
+                                      {
+                                        "hexValue": "222c2022696d616765223a2022",
+                                        "id": 1524,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "kind": "string",
+                                        "lValueRequested": false,
+                                        "nodeType": "Literal",
+                                        "src": "829:15:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_stringliteral_8d0de490dde571af103e878aa265925a94dd83b4f74e62b617db5ad43a4f76af",
+                                          "typeString": "literal_string \"\", \"image\": \"\""
+                                        },
+                                        "value": "\", \"image\": \""
+                                      },
+                                      {
+                                        "expression": {
+                                          "id": 1525,
+                                          "name": "params",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 1502,
+                                          "src": "846:6:3",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_TokenURIParams_$1498_memory_ptr",
+                                            "typeString": "struct NFTDescriptor.TokenURIParams memory"
+                                          }
+                                        },
+                                        "id": 1526,
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberLocation": "853:5:3",
+                                        "memberName": "image",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": 1495,
+                                        "src": "846:12:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        }
+                                      },
+                                      {
+                                        "hexValue": "222c202261747472696275746573223a205b",
+                                        "id": 1527,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "kind": "string",
+                                        "lValueRequested": false,
+                                        "nodeType": "Literal",
+                                        "src": "859:20:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_stringliteral_194ff09a534a7956d0c2e1a437dfffd1331c92c342863033d8b827ea42f7585b",
+                                          "typeString": "literal_string \"\", \"attributes\": [\""
+                                        },
+                                        "value": "\", \"attributes\": ["
+                                      },
+                                      {
+                                        "expression": {
+                                          "id": 1528,
+                                          "name": "params",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 1502,
+                                          "src": "881:6:3",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_TokenURIParams_$1498_memory_ptr",
+                                            "typeString": "struct NFTDescriptor.TokenURIParams memory"
+                                          }
+                                        },
+                                        "id": 1529,
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberLocation": "888:10:3",
+                                        "memberName": "attributes",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": 1497,
+                                        "src": "881:17:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        }
+                                      },
+                                      {
+                                        "hexValue": "5d7d",
+                                        "id": 1530,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "kind": "string",
+                                        "lValueRequested": false,
+                                        "nodeType": "Literal",
+                                        "src": "900:4:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_stringliteral_ab149d31dbf8c3ed1cc7ba15c88205185e426c492b6b350058945b7266ec7e76",
+                                          "typeString": "literal_string \"]}\""
+                                        },
+                                        "value": "]}"
+                                      }
+                                    ],
+                                    "expression": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_stringliteral_14271abadab347880c45d45d3abf3dce36bb4aa23c658e4207d08ac9b3f38832",
+                                          "typeString": "literal_string \"{\"name\":\"\""
+                                        },
+                                        {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        },
+                                        {
+                                          "typeIdentifier": "t_stringliteral_9780691b4087a1893a28b24020f5f6d0c7583060bd6cfeb54b8284a5bf55f11f",
+                                          "typeString": "literal_string \"\", \"description\":\"\""
+                                        },
+                                        {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        },
+                                        {
+                                          "typeIdentifier": "t_stringliteral_8d0de490dde571af103e878aa265925a94dd83b4f74e62b617db5ad43a4f76af",
+                                          "typeString": "literal_string \"\", \"image\": \"\""
+                                        },
+                                        {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        },
+                                        {
+                                          "typeIdentifier": "t_stringliteral_194ff09a534a7956d0c2e1a437dfffd1331c92c342863033d8b827ea42f7585b",
+                                          "typeString": "literal_string \"\", \"attributes\": [\""
+                                        },
+                                        {
+                                          "typeIdentifier": "t_string_memory_ptr",
+                                          "typeString": "string memory"
+                                        },
+                                        {
+                                          "typeIdentifier": "t_stringliteral_ab149d31dbf8c3ed1cc7ba15c88205185e426c492b6b350058945b7266ec7e76",
+                                          "typeString": "literal_string \"]}\""
+                                        }
+                                      ],
+                                      "expression": {
+                                        "id": 1516,
+                                        "name": "abi",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": -1,
+                                        "src": "744:3:3",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_magic_abi",
+                                          "typeString": "abi"
+                                        }
+                                      },
+                                      "id": 1517,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "memberLocation": "748:12:3",
+                                      "memberName": "encodePacked",
+                                      "nodeType": "MemberAccess",
+                                      "src": "744:16:3",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                                        "typeString": "function () pure returns (bytes memory)"
+                                      }
+                                    },
+                                    "id": 1531,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "kind": "functionCall",
+                                    "lValueRequested": false,
+                                    "nameLocations": [],
+                                    "names": [],
+                                    "nodeType": "FunctionCall",
+                                    "src": "744:161:3",
+                                    "tryCall": false,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_bytes_memory_ptr",
+                                      "typeString": "bytes memory"
+                                    }
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bytes_memory_ptr",
+                                      "typeString": "bytes memory"
+                                    }
+                                  ],
+                                  "id": 1515,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "nodeType": "ElementaryTypeNameExpression",
+                                  "src": "713:5:3",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                                    "typeString": "type(bytes storage pointer)"
+                                  },
+                                  "typeName": {
+                                    "id": 1514,
+                                    "name": "bytes",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "713:5:3",
+                                    "typeDescriptions": {}
+                                  }
+                                },
+                                "id": 1532,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "kind": "typeConversion",
+                                "lValueRequested": false,
+                                "nameLocations": [],
+                                "names": [],
+                                "nodeType": "FunctionCall",
+                                "src": "713:214:3",
+                                "tryCall": false,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes_memory_ptr",
+                                  "typeString": "bytes memory"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes_memory_ptr",
+                                  "typeString": "bytes memory"
+                                }
+                              ],
+                              "expression": {
+                                "id": 1512,
+                                "name": "Base64",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3154,
+                                "src": "678:6:3",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_Base64_$3154_$",
+                                  "typeString": "type(library Base64)"
+                                }
+                              },
+                              "id": 1513,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "685:6:3",
+                              "memberName": "encode",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 3153,
+                              "src": "678:13:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_string_memory_ptr_$",
+                                "typeString": "function (bytes memory) pure returns (string memory)"
+                              }
+                            },
+                            "id": 1533,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "678:267:3",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_bccab2d885f86fda81bfd84dd4248d31f8073b473d187111d36536db073076fa",
+                              "typeString": "literal_string \"data:application/json;base64,\""
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "expression": {
+                            "id": 1509,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -1,
+                            "src": "595:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 1510,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "599:12:3",
+                          "memberName": "encodePacked",
+                          "nodeType": "MemberAccess",
+                          "src": "595:16:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 1534,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "595:364:3",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 1508,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "575:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_string_storage_ptr_$",
+                        "typeString": "type(string storage pointer)"
+                      },
+                      "typeName": {
+                        "id": 1507,
+                        "name": "string",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "575:6:3",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 1535,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "575:394:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 1506,
+                  "id": 1536,
+                  "nodeType": "Return",
+                  "src": "568:401:3"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 1499,
+              "nodeType": "StructuredDocumentation",
+              "src": "348:57:3",
+              "text": " @notice Construct an ERC721 token URI."
+            },
+            "functionSelector": "92b4c81b",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "constructTokenURI",
+            "nameLocation": "419:17:3",
+            "parameters": {
+              "id": 1503,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1502,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nameLocation": "459:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1538,
+                  "src": "437:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TokenURIParams_$1498_memory_ptr",
+                    "typeString": "struct NFTDescriptor.TokenURIParams"
+                  },
+                  "typeName": {
+                    "id": 1501,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1500,
+                      "name": "TokenURIParams",
+                      "nameLocations": [
+                        "437:14:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1498,
+                      "src": "437:14:3"
+                    },
+                    "referencedDeclaration": 1498,
+                    "src": "437:14:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TokenURIParams_$1498_storage_ptr",
+                      "typeString": "struct NFTDescriptor.TokenURIParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "436:30:3"
+            },
+            "returnParameters": {
+              "id": 1506,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1505,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1538,
+                  "src": "512:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1504,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "512:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "511:15:3"
+            },
+            "scope": 1539,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "NFTDescriptor",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1539
+        ],
+        "name": "NFTDescriptor",
+        "nameLocation": "195:13:3",
+        "scope": 1540,
+        "usedErrors": []
+      }
+    ]
+  },
+  "id": 3
+}
