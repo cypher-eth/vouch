@@ -51,14 +51,17 @@ forge t -vvv
 ```
 
 ### Deploy
+Copy .env.example to .env and edit your .env file with your own values.
+Don't commit your .env file to git/push to GitHub!
 
 ```sh
-export ETHERSCAN_API_KEY=key
-export GOERLI_RPC_URL=key
+cp .env.example .env
+source .env
 ```
 
+run
 ```sh
-forge script script/deployment/Deploy.s.sol --broadcast --rpc-url ${GOERLI_RPC_URL} -vvv
+forge script script/Deploy.s.sol --broadcast --rpc-url ${GOERLI_RPC_URL} -vvv
 ```
 
 add `--verify` flag to verify contracts

@@ -14,3 +14,7 @@ node_modules
 .hypothesis
 .woke-build
 .woke-logs
+
+out
+broadcast/
+cache/

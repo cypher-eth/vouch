@@ -3,9 +3,12 @@ pragma solidity 0.8.17;
 import {Test} from "forge-std/Test.sol";
 import {console} from "forge-std/console.sol";
 
-import {BaseTest} from "./BaseTest.sol";
+import {BaseTest} from "./BaseTest.t.sol";
+import {StringUtils} from "./utils/StringUtils.sol";
 
 contract BolivaresTest is BaseTest {
+    using StringUtils for string;
+
     // ACCOUNTS
     address public user1;
     address public user2;
@@ -21,12 +24,23 @@ contract BolivaresTest is BaseTest {
     function testRegister() public {
         vm.startPrank(user1);
         string memory barcode = "12345";
-        bolivares.register(user1, barcode);
-        assert(bolivares.getUserFromVouch(barcode) == account.address);
-        assert(bolivares.userBarcode(user1.address) == barcode);
+        bolivares.register(barcode);
+        assert(bolivares.getUserFromVouch(barcode) == user1);
+        assert(barcode.equal(bolivares.userBarcode(user1)));
 
         vm.expectRevert("Cannot register same bill twice");
-        bolivares.register(user1, barcode);
+        bolivares.register(barcode);
+        vm.stopPrank();
+    }
+
+    function testRegisterFuzz(string memory barcode) public {
+        vm.startPrank(user1);
+        bolivares.register(barcode);
+        assert(bolivares.getUserFromVouch(barcode) == user1);
+        assert(barcode.equal(bolivares.userBarcode(user1)));
+
+        vm.expectRevert("Cannot register same bill twice");
+        bolivares.register(barcode);
         vm.stopPrank();
     }
 
