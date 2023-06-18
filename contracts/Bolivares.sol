@@ -1,16 +1,17 @@
-pragma solidity 0.8.16;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.16;
 
 
 import "./Tokens/ERC721S.sol";
 import "./Descriptors/BolivaresDescriptor.sol";
 import "./Utils/BokkyPooBahsDateTimeLibrary.sol";
 import "./Utils/Documents.sol";
-import "./Vouch.sol";
+// import "./Vouch.sol";
 
 
 contract Bolivares is 
     Documents, 
-    ERC721S("Test Bolivares", "VIBES"), 
+    ERC721S("Test Bolivares", "VIBES"),
     BolivaresDescriptor
 {
     using BokkyPooBahsDateTimeLibrary for uint;
@@ -72,7 +73,7 @@ contract Bolivares is
      * @param barcode user's barcode
      */
     function unregister(string calldata barcode) external {
-        require(barcodes[barcode] == msg.sender);
+        require(barcodes[barcode] == msg.sender, "Barcode is not registered");
         // require(userBarcode[msg.sender] == barcode);
         barcodes[barcode] = address(0);
         userBarcode[msg.sender] = "";
@@ -87,6 +88,7 @@ contract Bolivares is
         require(vouches.length > 0);
         VouchData memory vouchData = vouches[vouches.length-1];
         unvouched[barcode].pop();
+        // TODO: barcodes[barcode] is zero address
         _mintVouch(vouchData.sender, barcodes[barcode], vouchData.message);
     }
 
@@ -126,7 +128,7 @@ contract Bolivares is
      * @notice Vouches for the user associated with a barcode
      * @param barcode barcode of the user for whom to vouch
      * @param message message to associate with the vouch
-     * @return true if success
+     * @return success true if success
      */    
     function vouch(string memory barcode, string calldata message) external returns (bool success) {
         address sender = msg.sender;
@@ -135,6 +137,7 @@ contract Bolivares is
         require(sender != recipient, "Vouch for yourself is not allowed");
 
         // require(userBarcode[sender] == barcode);
+        // TODO: 
         if (recipient == address(0)) {
             unvouched[barcode].push(VouchData(sender, message));
             return true;
@@ -185,7 +188,6 @@ contract Bolivares is
      * @dev Internal function to to mint a new vouch
      * @param sender address of the sender creating the vouch
      * @param recipient voucher recipient address
-     * @param vouchId ID of the vouch
      * @param message message of the vouch.
      */
     function _mintVouch(address sender, address recipient, string memory message) internal {
@@ -195,7 +197,7 @@ contract Bolivares is
         }
 
         bytes32 vouchId = generateVouchHash(sender, recipient, message);
-        _vouch(recipient, message, sender, vouchId);
+        _vouch(recipient, message, sender);
 
         // Mint onchain vouch, if not exists
         uint256 tokenId = vouchToken[vouchId];
@@ -205,6 +207,11 @@ contract Bolivares is
             _mint(recipient, tokenId);
             vouchToken[vouchId] = tokenId;            
         }
+    }
+
+    /// @notice Generates hash 
+    function generateVouchHash(address sender, address recipient, string memory message) public view returns (bytes32 hash) {
+        hash = keccak256(abi.encode(address(this), VOUCH_ID, sender, recipient, message));
     }
 
     // ------------------------------------------------------------------------

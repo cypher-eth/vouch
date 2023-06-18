@@ -10,3 +10,7 @@ __pycache__
 
 # Node
 node_modules
+
+.hypothesis
+.woke-build
+.woke-logs

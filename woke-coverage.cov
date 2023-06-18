@@ -1,0 +1,102 @@
+{
+    "version": "1.0",
+    "data": {
+        "/Users/kutu/projects/Vouch/new/vouch/contracts/Tokens/ERC721S.sol": [
+            {
+                "name": "constructor",
+                "startLine": 44,
+                "startColumn": 4,
+                "endLine": 44,
+                "endColumn": 15,
+                "coverageHits": 1,
+                "modRecords": [],
+                "branchRecords": [
+                    {
+                        "startLine": 45,
+                        "startColumn": 8,
+                        "endLine": 45,
+                        "endColumn": 20,
+                        "coverageHits": 1
+                    },
+                    {
+                        "startLine": 46,
+                        "startColumn": 8,
+                        "endLine": 46,
+                        "endColumn": 24,
+                        "coverageHits": 1
+                    }
+                ]
+            }
+        ],
+        "/Users/kutu/projects/Vouch/new/vouch/contracts/Bolivares.sol": [
+            {
+                "name": "unregister",
+                "startLine": 74,
+                "startColumn": 13,
+                "endLine": 74,
+                "endColumn": 23,
+                "coverageHits": 9,
+                "modRecords": [],
+                "branchRecords": [
+                    {
+                        "startLine": 75,
+                        "startColumn": 8,
+                        "endLine": 75,
+                        "endColumn": 77,
+                        "coverageHits": 9
+                    },
+                    {
+                        "startLine": 78,
+                        "startColumn": 8,
+                        "endLine": 78,
+                        "endColumn": 36,
+                        "coverageHits": 7
+                    }
+                ]
+            },
+            {
+                "name": "register",
+                "startLine": 64,
+                "startColumn": 13,
+                "endLine": 64,
+                "endColumn": 21,
+                "coverageHits": 7,
+                "modRecords": [],
+                "branchRecords": [
+                    {
+                        "startLine": 65,
+                        "startColumn": 8,
+                        "endLine": 65,
+                        "endColumn": 83,
+                        "coverageHits": 7
+                    },
+                    {
+                        "startLine": 66,
+                        "startColumn": 8,
+                        "endLine": 66,
+                        "endColumn": 38,
+                        "coverageHits": 5
+                    }
+                ]
+            },
+            {
+                "name": "getUserFromVouch",
+                "startLine": 292,
+                "startColumn": 13,
+                "endLine": 292,
+                "endColumn": 29,
+                "coverageHits": 6,
+                "modRecords": [],
+                "branchRecords": [
+                    {
+                        "startLine": 293,
+                        "startColumn": 8,
+                        "endLine": 293,
+                        "endColumn": 32,
+                        "coverageHits": 6
+                    }
+                ]
+            }
+        ]
+    }
+}

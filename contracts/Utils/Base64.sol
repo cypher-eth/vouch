@@ -1,4 +1,4 @@
-pragma solidity 0.8.16;
+pragma solidity ^0.8.16;
 
 /// @title Base64
 /// @author Brecht Devos - <brecht@loopring.org>

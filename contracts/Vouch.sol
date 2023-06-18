@@ -1,4 +1,4 @@
-pragma solidity 0.8.16;
+pragma solidity ^0.8.16;
 
 import "./Utils/BokkyPooBahsDateTimeLibrary.sol";
 
@@ -53,7 +53,7 @@ contract Vouch {
         address recipient,
         string memory message,
         address sender,
-        bytes32 vouchId,
+        bytes32 vouchId
     ) internal returns (bool success) {
         // bytes32 hashed = generateVouchHash(sender, recipient, message);
 

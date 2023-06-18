@@ -2,7 +2,7 @@
 /// @title A library used to construct ERC721 token URIs and SVG images
 /// @dev From the Nouns NFT descriptor
 
-pragma solidity 0.8.16;
+pragma solidity ^0.8.16;
 
 import { Base64 } from '../Utils/Base64.sol';
 
@@ -19,7 +19,7 @@ contract NFTDescriptor {
      */
     function constructTokenURI(TokenURIParams memory params)
         public
-        view
+        pure
         returns (string memory)
     {
         // prettier-ignore
@@ -35,26 +35,26 @@ contract NFTDescriptor {
         );
     }
 
-    /**
-     * @notice Construct an ERC721 token URI.
-     */
-    function constructTokenDataURI(TokenURIParams memory params)
-        public
-        view
-        returns (string memory)
-    {
-        // prettier-ignore
-        return string(
-            abi.encodePacked(
-                'data:application/json;base64,',
-                Base64.encode(
-                    bytes(
-                        abi.encodePacked('{"name":"', params.name, '", "description":"', params.description, '", "image_data": "', params.image,'", "attributes": [', params.attributes, ']}')
-                    )
-                )
-            )
-        );
-    }
+    // /**
+    //  * @notice Construct an ERC721 token URI.
+    //  */
+    // function constructTokenDataURI(TokenURIParams memory params)
+    //     public
+    //     pure
+    //     returns (string memory)
+    // {
+    //     // prettier-ignore
+    //     return string(
+    //         abi.encodePacked(
+    //             'data:application/json;base64,',
+    //             Base64.encode(
+    //                 bytes(
+    //                     abi.encodePacked('{"name":"', params.name, '", "description":"', params.description, '", "image_data": "', params.image,'", "attributes": [', params.attributes, ']}')
+    //                 )
+    //             )
+    //         )
+    //     );
+    // }
 
 
 }

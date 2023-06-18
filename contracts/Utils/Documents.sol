@@ -1,4 +1,5 @@
-pragma solidity 0.8.16;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.16;
 // pragma experimental ABIEncoderV2;
 
 
@@ -49,15 +50,15 @@ contract Documents {
      */
 
     function _removeDocument(string calldata _name) internal {
-        require(_documents[_name].lastModified != uint64(0)); // dev: Document should exist
-        uint32 index = _documents[_name].docIndex - 1;
-        if (index != _docNames.length - 1) {
-            _docNames[index] = _docNames[_docNames.length - 1];
-            _documents[_docNames[index]].docIndex = index + 1; 
-        }
-        _docNames.pop();
-        emit DocumentRemoved(_name, _documents[_name].data);
-        delete _documents[_name];
+        // require(_documents[_name].lastModified != uint64(0)); // dev: Document should exist
+        // uint32 index = _documents[_name].docIndex - 1;
+        // if (index != _docNames.length - 1) {
+        //     _docNames[index] = _docNames[_docNames.length - 1];
+        //     _documents[_docNames[index]].docIndex = index + 1; 
+        // }
+        // _docNames.pop();
+        // emit DocumentRemoved(_name, _documents[_name].data);
+        // delete _documents[_name];
     }
 
     /**
