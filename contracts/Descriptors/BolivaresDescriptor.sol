@@ -17,7 +17,6 @@ abstract contract BolivaresDescriptor is NFTDescriptor {
     // NFT Descriptors
     // ------------------------------------------------------------------------
 
-
     /**
      * @notice Given a token ID and seed, construct a base64 encoded data URI for an NFT.
      */
@@ -35,7 +34,7 @@ abstract contract BolivaresDescriptor is NFTDescriptor {
      * @notice Given a token ID, construct a base64 encoded SVG.
      */
     function _vouchImage(uint _tokenId, uint256 _lastUpdate, address _sender, address _recipient, string memory _msg, string memory _barcode) internal view returns (string memory output) {
-        output = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: #ffeeff; font-family: serif; font-size: 15px; }</style><rect width="100%" height="100%" fill="#19473f" /><text x="250" y="40" class="base">';
+        output = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: #ffeeff; font-family: serif; font-size: 15px; }</style><rect width="100%" height="100%" fill="#19473f" /><text x="240" y="40" class="base">';
         output = string(abi.encodePacked(output, timestampToString(_lastUpdate), '</text><text x="20" y="80" class="base">'));
         output = string(abi.encodePacked(output, _msg, '</text><text x="20" y="265" class="base">from: </text><text x="20" y="290" class="base">'));
         output = string(abi.encodePacked(output, _barcode, '</text><text x="240" y="320" class="base">vouch # ' ,toString(_tokenId) , '</text></svg>'));

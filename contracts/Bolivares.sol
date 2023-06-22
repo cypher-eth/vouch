@@ -10,7 +10,7 @@ import "./Vouch.sol";
 
 contract Bolivares is 
     Documents, 
-    ERC721S("Test Bolivares", "VIBES"), 
+    ERC721S("Zuzalu Bolivares", "VIBES"), 
     BolivaresDescriptor
 {
     using BokkyPooBahsDateTimeLibrary for uint;
@@ -126,7 +126,6 @@ contract Bolivares is
      * @notice Vouches for the user associated with a barcode
      * @param barcode barcode of the user for whom to vouch
      * @param message message to associate with the vouch
-     * @return true if success
      */    
     function vouch(string memory barcode, string calldata message) external returns (bool success) {
         address sender = msg.sender;
@@ -154,20 +153,29 @@ contract Bolivares is
     }
 
 
+    /// @notice Generates hash 
+    function generateVouchHash(address sender, address recipient, string memory message) public view returns (bytes32 hash) {
+        hash = keccak256(abi.encode(address(this), VOUCH_ID, sender, recipient, message));
+    }
+
+
     /**
      * @notice Creates a new vouch for a recipient
      * @param recipient address of the user for whom to vouch
      * @param message message of the vouch
      * @param sender address of the voucher
      */    
-    function _vouch(address recipient, string memory message, address sender) internal {
-        bytes32 hashed = generateVouchHash(sender,recipient,message);
-
+    function _vouch(
+        address recipient,
+        string memory message,
+        address sender,
+        bytes32 vouchId
+    ) internal returns (bool success) {
         // Update vouch
-        _updateVouch(hashed, sender); 
-        vouchMsg[hashed] = message;
+        _updateVouch(vouchId, sender);
+        vouchMsg[vouchId] = message;
+        return true;
     }
-
     /**
      * @dev Internal function to update an existing vouch or create a new one
      * @param vouchId ID of the vouch
@@ -185,7 +193,6 @@ contract Bolivares is
      * @dev Internal function to to mint a new vouch
      * @param sender address of the sender creating the vouch
      * @param recipient voucher recipient address
-     * @param vouchId ID of the vouch
      * @param message message of the vouch.
      */
     function _mintVouch(address sender, address recipient, string memory message) internal {
@@ -235,7 +242,7 @@ contract Bolivares is
     // ------------------------------------------------------------------------
 
     function tokenURI(uint256 id) public view override returns (string memory) {
-        return dataURI(id, lastUpdated(tokenInfo[id]) ,vouchSender(tokenInfo[id]), ownerOf(id), VOUCH_MSG, userBarcode[ownerOf(id)]);
+        return dataURI(id, lastUpdated(tokenInfo[id]) ,vouchSender(tokenInfo[id]), ownerOf(id), VOUCH_MSG, userBarcode[vouchInfo[tokenInfo[id]].sender]);
     }
 
     // ------------------------------------------------------------------------
