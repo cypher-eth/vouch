@@ -16,5 +16,3 @@ def main():
     etherscan = networks.provider.network.explorer
     etherscan.publish_contract("0x0000000000000000000000000000000000000000")
 
-
-

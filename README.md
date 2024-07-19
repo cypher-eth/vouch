@@ -1,6 +1,6 @@
 # Vouch
 
-A public message attesting to anything. 
+A vouch is a public message attesting to anything. 
 
 ## Use Cases
 
