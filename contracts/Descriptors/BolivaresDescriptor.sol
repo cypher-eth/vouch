@@ -2,7 +2,7 @@
 /// @title A library used to construct ERC721 token URIs and SVG images
 /// @dev From the Nouns NFT descriptor
 
-pragma solidity 0.8.16;
+pragma solidity 0.8.20;
 
 import "./NFTDescriptor.sol";
 import "../Utils/BokkyPooBahsDateTimeLibrary.sol";

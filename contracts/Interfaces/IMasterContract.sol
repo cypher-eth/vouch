@@ -1,4 +1,4 @@
-pragma solidity 0.8.16;
+pragma solidity 0.8.20;
 
 interface IMasterContract {
     /// @notice Init function that gets called from `BoringFactory.deploy`.

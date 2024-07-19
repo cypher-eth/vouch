@@ -1,4 +1,4 @@
-pragma solidity 0.8.16;
+pragma solidity 0.8.20;
 
 
 // import "./Tokens/ERC721S.sol";
@@ -16,7 +16,7 @@ pragma solidity 0.8.16;
 //     string public constant VOUCH_NAME = "Zuzalu Bolivares";
 //     // bytes32 public constant VOUCH_ID = keccak256(abi.encode(VOUCH_NAME));
 
-//     string public constant REGISTER_MSG = "I vouch that this person recieved a Bolivares in Zuzalu";
+//     string public constant REGISTER_MSG = "I vouch that this person received a Bolivares in Zuzalu";
 //     string public constant VOUCH_MSG = "I vouch this person had good vibes at Zuzalu";
 
 //     uint256 public tokenIds;
